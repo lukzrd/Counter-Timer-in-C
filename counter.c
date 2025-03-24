@@ -1,15 +1,6 @@
 #include <stdio.h>
 #include <windows.h>
 
-#define BLACK 0
-#define BLUE 3
-#define GREEN 2
-#define white 1
-void setColorText(int colorText, int colorBackground)
-{
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), colorText + (colorBackground * 16));
-}
-
 void menu();
 void counter();
 void timer();
@@ -25,7 +16,7 @@ void menu()
 
     int response;
     printf("\033[2J\033[H");
-    setColorText(BLUE, BLACK);
+    printf("\033[36m");
     printf("   ╔════════════════════════════════╗\n");
     printf("   ║      ⌚ COUNTER & TIMER ⌚     ║\n");
     printf("   ╠════════════════════════════════╣\n");
